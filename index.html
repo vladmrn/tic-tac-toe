@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Odibee+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" href="#">
+
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Gochi+Hand&display=swap" rel="stylesheet">
+    <title>Tic Tac Toe</title>
+</head>
+
+<body onload="whosTurn()"></body>
+<body>
+    <h1>Tic Tac Toe</h1>
+    <div class="main">
+        <div class="board" id="board">
+            <div class="cell" id="cell_00" onclick="chooseBox(0, 0)"></div>
+            <div class="cell" id="cell_01" onclick="chooseBox(0, 1)"></div>
+            <div class="cell" id="cell_02" onclick="chooseBox(0, 2)"></div>
+            <div class="cell" id="cell_10" onclick="chooseBox(1, 0)"></div>
+            <div class="cell" id="cell_11" onclick="chooseBox(1, 1)"></div>
+            <div class="cell" id="cell_12" onclick="chooseBox(1, 2)"></div>
+            <div class="cell" id="cell_20" onclick="chooseBox(2, 0)"></div>
+            <div class="cell" id="cell_21" onclick="chooseBox(2, 1)"></div>
+            <div class="cell" id="cell_22" onclick="chooseBox(2, 2)"></div>
+        </div>
+        <div class="textIndicator">
+            <h3 id="playerIndicatorMessage">It's <span id="whosTurn"></span>'s turn!</h3>
+            <br>
+            <br>
+            <h3 id="winnerIndicatorMessage"><span id="winner"></span> has WON!</h3>
+            <br>
+            <button id="restartButton" onclick="refreshPage()">Play Again!</button>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,59 @@
+body {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+h1 {
+    text-align: center;
+}
+
+.textIndicator {
+    float: left;
+}
+
+.board {
+    width: 300px;
+    height: 300px;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    grid-template-columns: repeat(3, auto);
+    float: right;
+}
+
+.cell {
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    
+    font-size: 75px;
+    background-color: aliceblue;
+    border: 1px solid black;
+    font-family: 'Gochi Hand', cursive;
+}
+
+.main {
+    width: 100%;
+    text-align: center;
+}
+
+@media (max-width: 660px) {
+    .main {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .board {
+        order: 2;
+    }
+    .textIndicator {
+        width: 100%;
+        order: 1;
+        margin-bottom: 30px;
+    }
+}
+
+#winnerIndicatorMessage {
+    visibility: hidden;
+}
