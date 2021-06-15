@@ -1,14 +1,7 @@
-function refreshPage() {
-    window.location.reload();
-}
-
 var numberOfEntries = 0;
 
-function whosTurn() {
-    if (numberOfEntries % 2 === 0) {
-        return turn = "X";
-    }
-    return turn = "0";
+function refreshPage() {
+    window.location.reload();
 }
 
 function chooseBox(i, j) {
@@ -23,6 +16,13 @@ function chooseBox(i, j) {
             document.getElementById("playerIndicatorMessage").innerHTML = "It's " + turn + "'s turn";
         }
     }
+}
+
+function whosTurn() {
+    if (numberOfEntries % 2 === 0) {
+        return turn = "X";
+    }
+    return turn = "0";
 }
 
 function checkWinner(i, j, lastInput) {
@@ -81,15 +81,6 @@ function checkWinner(i, j, lastInput) {
     }
 }
 
-function markVictory(cell1, cell2, cell3, lastInput) {
-    document.getElementById("winner").innerHTML = lastInput;
-    document.getElementById("winnerIndicatorMessage").style.visibility = "visible";
-    document.getElementById("playerIndicatorMessage").style.visibility = "hidden";
-    document.getElementById(cell1).style.color = "green";
-    document.getElementById(cell2).style.color = "green";
-    document.getElementById(cell3).style.color = "green";
-}
-
 function checkFlagIsWinner(isWinner, cell1, cell2, cell3, lastInput) {
     if (isWinner === true) {
         numberOfEntries = 10;
@@ -97,4 +88,13 @@ function checkFlagIsWinner(isWinner, cell1, cell2, cell3, lastInput) {
     } else {
         return isWinner = true;
     }
+}
+
+function markVictory(cell1, cell2, cell3, lastInput) {
+    document.getElementById("winner").innerHTML = lastInput;
+    document.getElementById("winnerIndicatorMessage").style.visibility = "visible";
+    document.getElementById("playerIndicatorMessage").style.visibility = "hidden";
+    document.getElementById(cell1).style.color = "green";
+    document.getElementById(cell2).style.color = "green";
+    document.getElementById(cell3).style.color = "green";
 }
